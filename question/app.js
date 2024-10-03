@@ -5,9 +5,9 @@ let age = 24;
 console.log('私のニックネームは' + nickname + 'です。年齢は' + age + '歳です。');
 
 // Q2
-let language = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
-let JavaScript = language[0];
-let Python = language[3];
+let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
+let JavaScript = languages[0];
+let Python = languages[3];
 let templateText = `私の好きな言語は${JavaScript}です。次は${Python}を勉強してみたいです。`;
 
 console.log(templateText);
@@ -103,11 +103,52 @@ function remainder(x, y) {
 console.log('5 を 3 で割った余りは' + remainder(5, 3) + 'です。');
 
 // Q10
-function foo() {
-  let x = 1;
-}
-console.log(x);
-
 // 変数xはローカル変数であるため。
 // 変数にはスコープと呼ばれる有効範囲が決められており、
 // 関数内で定義した変数は関数内からは参照可能だが、関数外から変数を参照することはできない。
+
+// ----------------応用編----------------
+// Q1
+let floor = Math.floor(Math.random() * (9 + 1));
+console.log(floor);
+
+// Q2
+function sayHello() {
+  console.log('Hello World!');
+}
+setTimeout(sayHello, 3000);
+
+// Q3
+let num = -1;
+  if (num > 0) {
+    console.log('num is greater than 0');
+  } else if (num < 0) {
+    console.log('num is less than 0');
+  } else if (num === 0) {
+    console.log('num is 0');
+  }
+
+// Q4
+let numbers = [];
+
+for (let i = 0; i < 100; i++) {
+  numbers[i] = i;
+}
+
+console.log(numbers);
+
+// Q5
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+let sum = 0;
+
+for (let i = 0, sum = mixed.length; i < sum; i++) {
+  if (typeof mixed[i] === 'number') {
+    if (mixed[i] % 2 === 0) {
+      console.log('even');
+    } else {
+      console.log('odd');
+    }
+  } else {
+    console.log('not number');
+  }
+}

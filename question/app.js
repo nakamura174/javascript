@@ -44,8 +44,13 @@ let playerList = [
 console.log(playerList[1].favorites[1]);
 
 // Q5
-let averageAge = playerList[0].age + playerList[1].age + playerList[2].age;
-console.log(averageAge / playerList.length);
+let sumNum = 0;
+
+for (let i = 0; i < playerList.length; i++){
+  sumNum += playerList[i].age;
+}
+let avg = sumNum / playerList.length;
+console.log(avg);
 
 // Q6
 function sayHello() {
@@ -109,7 +114,7 @@ console.log('5 を 3 で割った余りは' + remainder(5, 3) + 'です。');
 
 // ----------------応用編----------------
 // Q1
-let floor = Math.floor(Math.random() * (9 + 1));
+let floor = Math.floor(Math.random() * 10);
 console.log(floor);
 
 // Q2
@@ -139,9 +144,8 @@ console.log(numbers);
 
 // Q5
 let mixed = [4, '2', 5, '8', '9', 0, 1];
-let sum = 0;
 
-for (let i = 0, sum = mixed.length; i < sum; i++) {
+for (let i = 0; i < mixed.length; i++) {
   if (typeof mixed[i] === 'number') {
     if (mixed[i] % 2 === 0) {
       console.log('even');

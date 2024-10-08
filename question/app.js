@@ -48,6 +48,7 @@ let sumNum = 0;
 
 for (let i = 0; i < playerList.length; i++){
   sumNum += playerList[i].age;
+  // sumNum = sumNum + playerList[i].age;
 }
 let avg = sumNum / playerList.length;
 console.log(avg);
@@ -77,10 +78,12 @@ user.sayHello();
 let calc = {};
 
 calc.add = function(x, y) {
+  // 仮引数
   console.log(x + y);
 }
 
 calc.add(2, 5);
+// 実引数
 
 calc.subtract = function(x, y) {
   console.log(x - y);
